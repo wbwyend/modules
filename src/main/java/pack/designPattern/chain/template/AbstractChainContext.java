@@ -2,6 +2,7 @@ package pack.designPattern.chain.template;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.core.Ordered;
+import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
 import java.util.*;
@@ -13,15 +14,22 @@ import java.util.stream.Collectors;
  *@author wbwyend
  *@date 2024/05/15 
  */
+@Component
 public final class AbstractChainContext<T> implements CommandLineRunner {
     private final Map<String, List<AbstractChainHandler>> abstractChainHandlerMap = new HashMap<>();
 
-    public void handle(String mark, T requestParam) {
+    /**
+     * 执行责任链
+     *
+     * @param mark          组件标识
+     * @param requestParam  请求参数
+     */
+    public void handler(String mark, T requestParam) {
         List<AbstractChainHandler> abstractChainHandlers = abstractChainHandlerMap.get(mark);
         if (CollectionUtils.isEmpty(abstractChainHandlers)) {
             throw new RuntimeException(String.format("[%s] Chain of Responsibility ID is undefined.", mark));
         }
-        abstractChainHandlers.forEach(each -> each.handle(requestParam));
+        abstractChainHandlers.forEach(each -> each.handler(requestParam));
     }
 
     /**

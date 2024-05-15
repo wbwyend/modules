@@ -3,6 +3,7 @@ package pack.designPattern.chain.template;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
@@ -12,6 +13,7 @@ import java.util.Map;
  *@author wbwyend
  *@date 2024/05/15 
  */
+@Component
 public class ApplicationContextHolder implements ApplicationContextAware {
     private static ApplicationContext CONTEXT;
 
