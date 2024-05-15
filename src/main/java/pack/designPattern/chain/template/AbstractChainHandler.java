@@ -1,4 +1,6 @@
-package designPattern.chain.template;
+package pack.designPattern.chain.template;
+
+import org.springframework.core.Ordered;
 
 import java.io.Serializable;
 
@@ -8,9 +10,8 @@ import java.io.Serializable;
  *@author wbwyend
  *@date 2024/05/15 
  */
-public interface AbstractChainHandler<T> extends Serializable {
+public interface AbstractChainHandler<T> extends Ordered {
     void handle(T requestParam);
 
     String mark();
-
 }

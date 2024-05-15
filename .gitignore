@@ -1,0 +1,6 @@
+# 项目排除路径
+/target/
+/pom.xml
+/.idea/
+/src/main/resources/
+/src/main/java/pack/ModuleApplication.java

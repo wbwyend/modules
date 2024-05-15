@@ -1,6 +1,6 @@
-package designPattern.builder.test;
+package pack.designPattern.builder.test;
 
-import designPattern.builder.example.ThreadPoolExecutorBuilder;
+import pack.designPattern.builder.example.ThreadPoolExecutorBuilder;
 
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;

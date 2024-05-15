@@ -1,4 +1,4 @@
-package designPattern.builder.template;
+package pack.designPattern.builder.template;
 
 import java.io.Serializable;
 

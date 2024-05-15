@@ -1,6 +1,6 @@
-package designPattern.builder.example;
+package pack.designPattern.builder.example;
 
-import designPattern.builder.template.Builder;
+import pack.designPattern.builder.template.Builder;
 
 import java.util.concurrent.*;
 
