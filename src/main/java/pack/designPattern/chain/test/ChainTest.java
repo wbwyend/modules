@@ -16,7 +16,7 @@ import pack.designPattern.chain.template.AbstractChainContext;
 public class ChainTest {
 
     @Autowired
-    private AbstractChainContext<OrderCreateParam> abstractChainContext;
+    private AbstractChainContext abstractChainContext;
 
     public void test() {
         OrderCreateParam orderCreateParam = new OrderCreateParam();

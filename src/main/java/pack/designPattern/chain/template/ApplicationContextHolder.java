@@ -34,7 +34,7 @@ public class ApplicationContextHolder implements ApplicationContextAware {
         return CONTEXT.getBean(name, clazz);
     }
 
-    public static <T> Map<String, T> getBeanOfType(Class<T> clazz) {
+    public static <T> Map<String, T> getBeansOfType(Class<T> clazz) {
         return CONTEXT.getBeansOfType(clazz);
     }
 }
